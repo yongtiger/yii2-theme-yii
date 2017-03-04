@@ -11,8 +11,6 @@
 
 ## DEPENDENCES
 
-* [Yii2 Advanced Template](https://github.com/yiisoft/yii2-app-advanced)
-
 
 ## INSTALLATION   
 
