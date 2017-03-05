@@ -6,9 +6,9 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\bootstrap\Dropdown;
 use yii\widgets\Breadcrumbs;
-use yongtiger\themeyii\AppAsset;
+use yongtiger\themeyii\ThemeAsset;
 
-AppAsset::register($this);
+ThemeAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -27,14 +27,14 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => AppAsset::format(isset(\Yii::$app->params['brandLabel']) ? \Yii::$app->params['brandLabel'] : \Yii::$app->name),
+        'brandLabel' => ThemeAsset::format(isset(\Yii::$app->params['brandLabel']) ? \Yii::$app->params['brandLabel'] : \Yii::$app->name),
         'brandUrl' => isset(\Yii::$app->params['brandUrl']) ? \Yii::$app->params['brandUrl'] : \Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => AppAsset::t('message', 'Home'), 'url' => ['/site/index']],
+        ['label' => ThemeAsset::t('message', 'Home'), 'url' => ['/site/index']],
         ['label' => \Yii::t('app', 'About'), 'url' => ['/site/about']],
         ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
     ];
