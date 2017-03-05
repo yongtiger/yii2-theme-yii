@@ -1,5 +1,11 @@
 # Development roadmap
 
+## v0.0.2 (yii2-brainbase frontend views)
+
+
+## v0.0.1 (yii2 frontend views)
+
+
 ## v0.0.0 (initial commit)
 
 Features of this version:
