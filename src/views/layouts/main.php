@@ -6,7 +6,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\bootstrap\Dropdown;
 use yii\widgets\Breadcrumbs;
-use frontend\assets\AppAsset;
+use yongtiger\themeyii\AppAsset;
 
 AppAsset::register($this);
 
@@ -27,14 +27,14 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => isset(\Yii::$app->params['brandLabel']) ? \Yii::$app->params['brandLabel'] : \Yii::$app->name,
+        'brandLabel' => AppAsset::format(isset(\Yii::$app->params['brandLabel']) ? \Yii::$app->params['brandLabel'] : \Yii::$app->name),
         'brandUrl' => isset(\Yii::$app->params['brandUrl']) ? \Yii::$app->params['brandUrl'] : \Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => \Yii::t('common', 'Home'), 'url' => ['/site/index']],
+        ['label' => AppAsset::t('message', 'Home'), 'url' => ['/site/index']],
         ['label' => \Yii::t('app', 'About'), 'url' => ['/site/about']],
         ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
     ];
