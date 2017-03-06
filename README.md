@@ -1,4 +1,4 @@
-# Yii2-theme-yii v0.0.6 (Bootstrap.php)
+# Yii2-theme-yii v0.0.7 (CHG# yongtiger/yii2-assetbundle changed to yongtiger/yii2-theme)
 
 [![Latest Stable Version](https://poser.pugx.org/yongtiger/yii2-theme-yii/v/stable)](https://packagist.org/packages/yongtiger/yii2-theme-yii)
 [![Total Downloads](https://poser.pugx.org/yongtiger/yii2-theme-yii/downloads)](https://packagist.org/packages/yongtiger/yii2-theme-yii) 
@@ -11,7 +11,7 @@
 
 ## DEPENDENCES
 
-* [yongtiger/yii2-assetbundle](https://github.com/yongtiger/yii2-assetbundle)
+* [yongtiger/yii2-theme](https://github.com/yongtiger/yii2-theme)
 
 
 ## INSTALLATION   

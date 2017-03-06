@@ -22,7 +22,7 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
 
-        "yongtiger/yii2-assetbundle": "*"
+        "yongtiger/yii2-theme": "*"
     },
     "autoload": {
         "psr-4": {

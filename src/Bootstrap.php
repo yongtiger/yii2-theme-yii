@@ -23,15 +23,13 @@ use yii\base\Application;
  * @see http://www.yiiframework.com/doc-2.0/guide-structure-extensions.html#bootstrapping-classes
  * @package yongtiger\themeyii
  */
-class Bootstrap implements BootstrapInterface
+class Bootstrap extends \yongtiger\theme\Bootstrap implements BootstrapInterface
 {
     /**
      * @inheritdoc
      */
     public function bootstrap($app)
     {
-        $app->on(Application::EVENT_BEFORE_REQUEST, function () {
-             // do something here
-        });
+        parent::bootstrap($app);
     }
 }

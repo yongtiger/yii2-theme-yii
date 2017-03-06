@@ -19,7 +19,7 @@ use Yii;
  *
  * @package yongtiger\themeyii
  */
-class ThemeAsset extends \yongtiger\assetbundle\AssetBundle
+class ThemeAsset extends \yongtiger\theme\AssetBundle
 {
     // static $themePath = '@yongtiger/themeyii2'; ///optional
     // static $themeUrlReplace = '{theme}';    ///optional

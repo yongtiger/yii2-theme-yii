@@ -19,7 +19,7 @@ use Yii;
  *
  * @package yongtiger\themeyii
  */
-class OtherThemeAsset extends \yongtiger\assetbundle\AssetBundle
+class OtherThemeAsset extends \yongtiger\theme\AssetBundle
 {
     public $css = [
         // 'css/other.css',
