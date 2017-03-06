@@ -1,4 +1,4 @@
-# Yii2-theme-yii v0.0.7 (CHG# yongtiger/yii2-assetbundle changed to yongtiger/yii2-theme)
+# Yii2-theme-yii v0.0.8 (CHG# addd `rmrevin/yii2-fontawesome` into composer.json)
 
 [![Latest Stable Version](https://poser.pugx.org/yongtiger/yii2-theme-yii/v/stable)](https://packagist.org/packages/yongtiger/yii2-theme-yii)
 [![Total Downloads](https://poser.pugx.org/yongtiger/yii2-theme-yii/downloads)](https://packagist.org/packages/yongtiger/yii2-theme-yii) 

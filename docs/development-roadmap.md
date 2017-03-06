@@ -1,5 +1,8 @@
 # Development roadmap
 
+## v0.0.8 (CHG# addd `rmrevin/yii2-fontawesome` into composer.json)
+
+
 ## v0.0.7 (CHG# yongtiger/yii2-assetbundle changed to yongtiger/yii2-theme)
 
 

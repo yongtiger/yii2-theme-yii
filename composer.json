@@ -22,7 +22,9 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
 
-        "yongtiger/yii2-theme": "*"
+        "yongtiger/yii2-theme": "*",
+        
+        "rmrevin/yii2-fontawesome": "~2.9"
     },
     "autoload": {
         "psr-4": {
