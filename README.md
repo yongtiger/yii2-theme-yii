@@ -1,4 +1,4 @@
-# Yii2-theme-yii v0.0.5 (assets, layout/main.php, site.index.php)
+# Yii2-theme-yii v0.0.6 (Bootstrap.php)
 
 [![Latest Stable Version](https://poser.pugx.org/yongtiger/yii2-theme-yii/v/stable)](https://packagist.org/packages/yongtiger/yii2-theme-yii)
 [![Total Downloads](https://poser.pugx.org/yongtiger/yii2-theme-yii/downloads)](https://packagist.org/packages/yongtiger/yii2-theme-yii) 
