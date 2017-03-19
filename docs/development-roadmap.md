@@ -1,5 +1,8 @@
 # Development roadmap
 
+## v0.0.10 (FIX# i18n:long text translation)
+
+
 ## v0.0.9 (ADD# theme screenshot, title)
 
 
