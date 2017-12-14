@@ -1,4 +1,4 @@
-# Yii2-theme-yii v0.0.10 (FIX# i18n:long text translation)
+# Yii2-theme-yii v0.0.11 (FIX# i18n:typo)
 
 [![Latest Stable Version](https://poser.pugx.org/yongtiger/yii2-theme-yii/v/stable)](https://packagist.org/packages/yongtiger/yii2-theme-yii)
 [![Total Downloads](https://poser.pugx.org/yongtiger/yii2-theme-yii/downloads)](https://packagist.org/packages/yongtiger/yii2-theme-yii) 

@@ -1,5 +1,10 @@
 # Development roadmap
 
+## v0.0.11 (FIX# i18n:typo)
+
+* `\views\layouts\main.php`
+
+
 ## v0.0.10 (FIX# i18n:long text translation)
 
 
