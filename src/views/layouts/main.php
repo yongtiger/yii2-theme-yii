@@ -10,6 +10,9 @@ use yongtiger\themeyii\ThemeAsset;
 
 ThemeAsset::register($this);
 
+$i18n_The_content_can_not_be_blank = ThemeAsset::t('message', 'The content can not be blank.');
+$i18n_The_content_must_be_a_string = ThemeAsset::t('message', 'The content must be a string.');
+$i18n_The_content_can_only_contain_up_to_200_characters = ThemeAsset::t('message', 'The content can only contain up to 200 characters.');
 $this->registerJs(<<<JS
 $(".feed .nano").nanoScroller();
 var ias = jQuery.ias({container: ".feed .media-list", item: ".media", pagination: ".pagination", next: ".next a"});
@@ -20,8 +23,8 @@ jQuery('#w0').yiiActiveForm([
     {
         "id":"feed-content","name":"content","container":".field-feed-content","input":"#feed-content",
         "validate":function (attribute, value, messages, deferred, \$form) {
-            yii.validation.required(value, messages, {"message":"内容不能为空。"});
-            yii.validation.string(value, messages, {"message":"内容必须是一条字符串。","max":200,"tooLong":"内容只能包含至多200个字符。","skipOnEmpty":1});
+            yii.validation.required(value, messages, {"message":"{$i18n_The_content_can_not_be_blank}"});
+            yii.validation.string(value, messages, {"message":"{$i18n_The_content_must_be_a_string}", "max":200, "tooLong":"{$i18n_The_content_can_only_contain_up_to_200_characters}", "skipOnEmpty":1});
         }
     }
 ], []);
@@ -54,7 +57,7 @@ JS
         ],
     ]);
     $leftMenuItems = [
-        ['label' => ThemeAsset::t('message', 'Home'), 'url' => ['/site/index']],
+        ['label' => \Yii::t('common', 'Home'), 'url' => ['/site/index']],
         ['label' => \Yii::t('app', 'About'), 'url' => ['/site/about']],
         ['label' => \Yii::t('app', 'Contact') . '<i class="fa fa-fire"></i>', 'url' => ['/site/contact'], 'encode' => false],   ///@see http://www.yiiframework.com/doc-2.0/yii-bootstrap-nav.html#$items-detail
     ];
@@ -67,7 +70,7 @@ JS
 
     <form class="navbar-form visible-lg-inline-block" action="/search" method="get">
         <div class="input-group">
-            <input type="text" class="form-control" name="q" placeholder="全站搜索">
+            <input type="text" class="form-control" name="q" placeholder="<?= ThemeAsset::t('message', 'Search')?>">
             <span class="input-group-btn">
                 <button type="submit" class="btn btn-default">
                     <span class="fa fa-search"></span>

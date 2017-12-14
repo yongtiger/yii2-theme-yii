@@ -20,4 +20,10 @@
  */
 return [
 
+	///\src\views\layouts\main.php
+	'The content can not be blank.' => '内容不能为空。',
+	'The content must be a string.' => '内容必须是一条字符串。',
+	'The content can only contain up to 200 characters.' => '内容只能包含至多200个字符。',
+
+	'Search' => '全站搜索',
 ];

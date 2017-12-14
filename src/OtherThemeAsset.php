@@ -12,8 +12,6 @@
 
 namespace yongtiger\themeyii;
 
-use Yii;
-
 /**
  * Sample of other asset bundles.
  *
