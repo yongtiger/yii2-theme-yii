@@ -31,7 +31,7 @@ class ThemeAsset extends \yongtiger\theme\AssetBundle
 
     public $js = [
         'js/main.js',
-        'js/jquery.nanoscroller.min.js',
+        // 'js/jquery.nanoscroller.min.js',
         // 'js/emojify.min.js',
         // 'js/at.js',
         // 'js/jquery.atwho.min.js',

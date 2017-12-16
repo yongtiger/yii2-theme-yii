@@ -11,27 +11,27 @@ use yongtiger\themeyii\ThemeAsset;
 
 ThemeAsset::register($this);
 
-$i18n_The_content_can_not_be_blank = ThemeAsset::t('message', 'The content can not be blank.');
-$i18n_The_content_must_be_a_string = ThemeAsset::t('message', 'The content must be a string.');
-$i18n_The_content_can_only_contain_up_to_200_characters = ThemeAsset::t('message', 'The content can only contain up to 200 characters.');
-$this->registerJs(<<<JS
-$(".feed .nano").nanoScroller();
-var ias = jQuery.ias({container: ".feed .media-list", item: ".media", pagination: ".pagination", next: ".next a"});
-ias.on("rendered", function(items) { $(".feed .nano").nanoScroller(); emojify.run(); });
-ias.extension(new IASSpinnerExtension());
-ias.extension(new IASNoneLeftExtension());
-jQuery('#w0').yiiActiveForm([
-    {
-        "id":"feed-content","name":"content","container":".field-feed-content","input":"#feed-content",
-        "validate":function (attribute, value, messages, deferred, \$form) {
-            yii.validation.required(value, messages, {"message":"{$i18n_The_content_can_not_be_blank}"});
-            yii.validation.string(value, messages, {"message":"{$i18n_The_content_must_be_a_string}", "max":200, "tooLong":"{$i18n_The_content_can_only_contain_up_to_200_characters}", "skipOnEmpty":1});
-        }
-    }
-], []);
-jQuery('#w6').modal({"show":false});
-JS
-);
+// $i18n_The_content_can_not_be_blank = ThemeAsset::t('message', 'The content can not be blank.');
+// $i18n_The_content_must_be_a_string = ThemeAsset::t('message', 'The content must be a string.');
+// $i18n_The_content_can_only_contain_up_to_200_characters = ThemeAsset::t('message', 'The content can only contain up to 200 characters.');
+// $this->registerJs(<<<JS
+// $(".feed .nano").nanoScroller();
+// var ias = jQuery.ias({container: ".feed .media-list", item: ".media", pagination: ".pagination", next: ".next a"});
+// ias.on("rendered", function(items) { $(".feed .nano").nanoScroller(); emojify.run(); });
+// ias.extension(new IASSpinnerExtension());
+// ias.extension(new IASNoneLeftExtension());
+// jQuery('#w0').yiiActiveForm([
+//     {
+//         "id":"feed-content","name":"content","container":".field-feed-content","input":"#feed-content",
+//         "validate":function (attribute, value, messages, deferred, \$form) {
+//             yii.validation.required(value, messages, {"message":"{$i18n_The_content_can_not_be_blank}"});
+//             yii.validation.string(value, messages, {"message":"{$i18n_The_content_must_be_a_string}", "max":200, "tooLong":"{$i18n_The_content_can_only_contain_up_to_200_characters}", "skipOnEmpty":1});
+//         }
+//     }
+// ], []);
+// jQuery('#w6').modal({"show":false});
+// JS
+// );
 
 ?>
 <?php $this->beginPage() ?>
