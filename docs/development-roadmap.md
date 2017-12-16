@@ -1,23 +1,28 @@
 # Development roadmap
 
+## v0.0.15 (FIX# footer:Copyright, Powered by)
+
+- `\views\layouts\main.php`
+
+
 ## v0.0.14 (FIX# js:back-to-top)
 
-* `\assets\js\main.js`
+- `\assets\js\main.js`
 
 
 ## v0.0.13 (ADD# a.asc:after, a.desc:after)
 
-* `\assets\css\site.css`
+- `\assets\css\site.css`
 
 
 ## v0.0.12 (ADD# ADD# avatarUrl)
 
-* `\views\layouts\main.php`
+- `\views\layouts\main.php`
 
 
 ## v0.0.11 (FIX# i18n:typo)
 
-* `\views\layouts\main.php`
+- `\views\layouts\main.php`
 
 
 ## v0.0.10 (FIX# i18n:long text translation)

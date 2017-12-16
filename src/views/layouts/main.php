@@ -8,6 +8,7 @@ use yii\bootstrap\NavBar;
 use yii\bootstrap\Dropdown;
 use yii\widgets\Breadcrumbs;
 use yongtiger\themeyii\ThemeAsset;
+use yongtiger\timezone\TimeZone;
 
 ThemeAsset::register($this);
 
@@ -215,14 +216,14 @@ ThemeAsset::register($this);
     <hr>
     <div class="container">
         <div class="clearfix">
-            <span class="pull-left">Copyright © 2009-2017 by <a href="http://www.yiichina.com/">Yii China</a>. All Rights Reserved.</span>
+            <span class="pull-left">Copyright © <?= \Yii::$app->params['CopyrightLabel'] ?> <?= date('Y') ?>. All Rights Reserved.</span>
             <span class="pull-right">
-                技术支持 <a href="http://www.yiiframework.com/" rel="external">Yii 框架</a> 2.0.11.2.
-                <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备09104811号</a>
-                <script src="ff_files/z_stat.php" language="JavaScript"></script>
-                <script src="ff_files/core.php" charset="utf-8" type="text/javascript"></script>
-                <a href="http://www.cnzz.com/stat/website.php?web_id=1256642902" target="_blank" title="站长统计">站长统计</a>
-                <a href="http://www.yiichina.com/link">友情链接</a>
+                Powered by 
+                <a href="<?= \Yii::$app->params['poweredByUrl'] ?>" target="_blank"> <?= \Yii::$app->params['poweredByName'] ?>
+                    <?= \Yii::$app->params['poweredByVersion'] ?> build <?= \Yii::$app->params['poweredByBuild'] ?>
+                </a>
+                <?= \Yii::$app->params['poweredBySourceLabel'] ?>
+                <?= TimeZone::timezone_format(\Yii::$app->timeZone) ?>, <?= \Yii::$app->formatter->asDatetime(time()) ?>
             </span>
         </div>
     </div>
