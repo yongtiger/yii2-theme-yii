@@ -2,6 +2,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\bootstrap\Dropdown;
@@ -85,11 +86,25 @@ JS
         $rightMenuItems[] = ['label' => \Yii::t('common', 'Signup'), 'url' => isset($this->params['signupUrl']) ? $this->params['signupUrl'] : ['/user/registration/signup']];
         $rightMenuItems[] = ['label' => \Yii::t('common', 'Login'), 'url' => \Yii::$app->user->loginUrl];
     } else {
+
+        ///[v0.0.12 (ADD# ADD# avatarUrl)]///?????
+        $profile = Yii::$app->user->identity->profile;
+        $avatar = $profile->avatar;
+        if (empty($avatar)) {
+            // $directoryAsset = \Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');    ///e.g. `/[git]/yii2-brainblog/frontend/web/assets/574f730`
+            // $directoryAsset = yongtiger\themeyii\ThemeAsset::getThemePath();    ///e.g. `@yongtiger/themeyii`
+            $directoryAsset = yongtiger\themeyii\ThemeAsset::getPublishedUrl(); ///e.g. `/frontend/web/assets/224ed38b`
+            $avatarUrl = $directoryAsset . '/image/noavatar_small.gif';
+        } else {
+            $dstImageUri = '@web/upload/avatar';
+            $avatarUrl = Url::to($dstImageUri . '/' . $avatar);
+        }
+
         ///[v0.9.2 (frontend\views\layouts\main.php:Dropdown Logout by `a` tag)]
         ///@see http://www.yiiframework.com/doc-2.0/yii-bootstrap-dropdown.html
         ///@see http://v3.bootcss.com/components/#dropdowns
         $rightMenuItems[] = '<li class="dropdown">'
-            . '<a href="#" data-toggle="dropdown" class="dropdown-toggle">(' . \Yii::$app->user->identity->username . ')<b class="caret"></b></a>'    ///?????caret
+            . '<a href="#" class="avatar dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="'. $avatarUrl .'" alt="' . \Yii::$app->user->identity->username . '"> <span class="caret"></span></a>' ///?????caret
             . Dropdown::widget([
                 'items' => [
                     ['label' => \Yii::t('common', 'My Account'), 'url' => ['/user/account']],
