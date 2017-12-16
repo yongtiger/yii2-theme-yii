@@ -105,7 +105,7 @@ ThemeAsset::register($this);
         ///@see http://www.yiiframework.com/doc-2.0/yii-bootstrap-dropdown.html
         ///@see http://v3.bootcss.com/components/#dropdowns
         $rightMenuItems[] = '<li class="dropdown">'
-            . '<a href="#" class="avatar dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="'. $avatarUrl .'" alt="' . \Yii::$app->user->identity->username . '"> <span class="caret"></span></a>' ///?????caret
+            . '<a href="#" class="avatar dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="' . \Yii::$app->user->identity->username . '"><img src="'. $avatarUrl .'" alt="' . \Yii::$app->user->identity->username . '"> <span class="caret"></span></a>' ///?????caret
             . Dropdown::widget([
                 'items' => [
                     ['label' => \Yii::t('common', 'My Account'), 'url' => ['/user/account']],
