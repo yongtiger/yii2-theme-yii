@@ -93,7 +93,7 @@ JS
         if (empty($avatar)) {
             // $directoryAsset = \Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');    ///e.g. `/[git]/yii2-brainblog/frontend/web/assets/574f730`
             // $directoryAsset = yongtiger\themeyii\ThemeAsset::getThemePath();    ///e.g. `@yongtiger/themeyii`
-            $directoryAsset = yongtiger\themeyii\ThemeAsset::getPublishedUrl(); ///e.g. `/frontend/web/assets/224ed38b`
+            $directoryAsset = ThemeAsset::getPublishedUrl(); ///e.g. `/frontend/web/assets/224ed38b`
             $avatarUrl = $directoryAsset . '/image/noavatar_small.gif';
         } else {
             $dstImageUri = '@web/upload/avatar';

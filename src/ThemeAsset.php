@@ -24,26 +24,26 @@ class ThemeAsset extends \yongtiger\theme\AssetBundle
 
     public $css = [
         'css/site.css',
-        'css/jquery.atwho.min.css',
-        'css/basic/emojify.min.css',
+        // 'css/jquery.atwho.min.css',
+        // 'css/basic/emojify.min.css',
         'css/nanoscroller.css',
     ];
 
     public $js = [
         'js/main.js',
         'js/jquery.nanoscroller.min.js',
-        'js/emojify.min.js',
-        'js/at.js',
-        'js/jquery.atwho.min.js',
-        'js/masonry.pkgd.min.js',
-        'js/imagesloaded.pkgd.min.js',
-        'js/jquery-ias.js',
-        'js/callbacks.js',
-        'js/extension/spinner.js',
-        'js/extension/noneleft.js',
-        'js/extension/paging.js',
-        'js/extension/trigger.js',
-        'js/jquery.caret.min.js',
+        // 'js/emojify.min.js',
+        // 'js/at.js',
+        // 'js/jquery.atwho.min.js',
+        // 'js/masonry.pkgd.min.js',
+        // 'js/imagesloaded.pkgd.min.js',
+        // 'js/jquery-ias.js',
+        // 'js/callbacks.js',
+        // 'js/extension/spinner.js',
+        // 'js/extension/noneleft.js',
+        // 'js/extension/paging.js',
+        // 'js/extension/trigger.js',
+        // 'js/jquery.caret.min.js',
     ];
     
     public $depends = [
