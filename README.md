@@ -1,4 +1,4 @@
-# Yii2-theme-yii v0.0.16 (FIX# footer:avatar title)
+# Yii2-theme-yii v0.0.17 (FIX# header:search)
 
 [![Latest Stable Version](https://poser.pugx.org/yongtiger/yii2-theme-yii/v/stable)](https://packagist.org/packages/yongtiger/yii2-theme-yii)
 [![Total Downloads](https://poser.pugx.org/yongtiger/yii2-theme-yii/downloads)](https://packagist.org/packages/yongtiger/yii2-theme-yii) 

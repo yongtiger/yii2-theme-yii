@@ -70,16 +70,15 @@ ThemeAsset::register($this);
     ]);
     ?>
 
-    <form class="navbar-form visible-lg-inline-block" action="/search" method="get">
+    <!--///[v0.0.17 (FIX# header:search)]-->
+    <?= Html::beginForm(['/article'], 'get', ['class' => 'navbar-form visible-lg-inline-block']); ?>
         <div class="input-group">
-            <input type="text" class="form-control" name="q" placeholder="<?= ThemeAsset::t('message', 'Search')?>">
+            <?= Html::textInput('PostSearch[keywords]', null, ['class' => 'form-control', 'placeholder' => ThemeAsset::t('message', 'Search')]) ?>
             <span class="input-group-btn">
-                <button type="submit" class="btn btn-default">
-                    <span class="fa fa-search"></span>
-                </button>
+                <?= Html::submitButton('<span class="fa fa-search"></span>', ['class' => 'btn btn-default']) ?>
             </span>
         </div>
-    </form>
+    <?= Html::endForm(); ?>
 
     <?php
     $rightMenuItems = [];
@@ -90,8 +89,7 @@ ThemeAsset::register($this);
 
         ///[v0.0.12 (ADD# ADD# avatarUrl)]///?????
         $profile = Yii::$app->user->identity->profile;
-        $avatar = $profile->avatar;
-        if (empty($avatar)) {
+        if (empty($profile) || empty($avatar = $profile->avatar)) {
             // $directoryAsset = \Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');    ///e.g. `/[git]/yii2-brainblog/frontend/web/assets/574f730`
             // $directoryAsset = yongtiger\themeyii\ThemeAsset::getThemePath();    ///e.g. `@yongtiger/themeyii`
             $directoryAsset = ThemeAsset::getPublishedUrl(); ///e.g. `/frontend/web/assets/224ed38b`
@@ -143,7 +141,7 @@ ThemeAsset::register($this);
 
 
 <footer class="footer">
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-lg-2">
                 <h2><i class="fa fa-info-circle"></i> 关于 Yii</h2>
@@ -212,7 +210,7 @@ ThemeAsset::register($this);
                 </dl>
             </div>
         </div>
-    </div>
+    </div>-->
     <hr>
     <div class="container">
         <div class="clearfix">
@@ -229,7 +227,7 @@ ThemeAsset::register($this);
     </div>
 </footer>
 
-<div id="w6" class="fade modal" role="dialog" tabindex="-1">
+<!--<div id="w6" class="fade modal" role="dialog" tabindex="-1">
     <div class="modal-dialog ">
         <div class="modal-content">
             <div class="modal-header">
@@ -256,7 +254,7 @@ ThemeAsset::register($this);
         </ul>
     </div>
     <div class="panel-footer">会员<br><em>5</em>人</div>
-</div>
+</div>-->
 
 <?php $this->endBody() ?>
 </body>

@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 
 $this->title = \Yii::$app->name;
@@ -12,7 +14,10 @@ $this->title = \Yii::$app->name;
             <p>Yii 自带了 <a href="http://www.yiichina.com/features">丰富的功能</a>，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。</p>
             <div class="row">
                 <div class="col-lg-5">
-                    <a class="btn btn-danger" href="http://www.yiichina.com/video"><i class="fa fa-play-circle-o"></i> 视频教程</a>                    <a class="btn btn-success" href="http://www.yiichina.com/doc"><i class="fa fa-book"></i> 中文文档</a>                    <a class="btn btn-primary" href="http://www.yiichina.com/download"><i class="fa fa-download"></i> 下载框架</a>                </div>
+                    <a class="btn btn-danger" href="http://www.yiichina.com/video"><i class="fa fa-play-circle-o"></i> 视频教程</a>
+                    <a class="btn btn-success" href="<?= Url::to(['/article', 'category_id' => ''])?>"><i class="fa fa-book"></i> 中文文档</a>
+                    <a class="btn btn-primary" href="http://www.yiichina.com/download"><i class="fa fa-download"></i> 下载框架</a>
+                </div>
                 <div class="col-lg-7">
                     2.0.11 版发布于 2017年02月01日 <strong>•</strong> 1.1.17 版发布于 2016年01月13日
                 </div>
